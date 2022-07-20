@@ -1,10 +1,19 @@
 package com.codeup.adlister.models;
 
+import java.util.Date;
+
 public class Ad {
     private long id;
     private long userId;
     private String title;
     private String description;
+
+    private String category;
+
+    private int likes;
+
+    private boolean isFlagged;
+
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
