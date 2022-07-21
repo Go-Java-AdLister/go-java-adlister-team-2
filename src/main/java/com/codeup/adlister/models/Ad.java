@@ -8,8 +8,19 @@ public class Ad {
     private String title;
     private String description;
     private String category;
-    private int likes = 0;
+    private long likes = 0;
     private boolean isFlagged = false;
+
+
+    public Ad(long id, long userId, String title, String description, String category, long likes, boolean isFlagged) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.category = category;
+        this.likes = likes;
+        this.isFlagged = isFlagged;
+    }
 
     public Ad(long id, long userId, String title, String description, String category) {
         this.id = id;
@@ -25,6 +36,8 @@ public class Ad {
         this.description = description;
         this.category = category;
     }
+
+
 
     public long getId() {
         return id;
@@ -66,11 +79,11 @@ public class Ad {
         this.category = category;
     }
 
-    public int getLikes() {
+    public long getLikes() {
         return likes;
     }
 
-    public void setLikes(int likes) {
+    public void setLikes(long likes) {
         this.likes = likes;
     }
 
