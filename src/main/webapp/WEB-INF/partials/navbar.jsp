@@ -9,8 +9,6 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
 
-
-
             <c:choose>
                 <c:when test="${isLoggedIn}" >
                     <li><a href="/logout">Logout</a></li>

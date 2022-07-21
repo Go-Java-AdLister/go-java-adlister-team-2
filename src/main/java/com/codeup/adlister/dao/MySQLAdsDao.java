@@ -23,6 +23,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
     @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
@@ -77,6 +78,10 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error finding an ad by id", e);
         }
     }
+
+//    public Ad deleteById() {
+//        String query =
+//    }
 
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
