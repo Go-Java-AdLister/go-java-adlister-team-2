@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: cojur
@@ -13,7 +14,9 @@
     </jsp:include>
 </head>
 <body>
-
+<div>
+<%--    ad information here   --%>
+</div>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 </body>

@@ -14,17 +14,11 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <a href="
-<c:url value="/details" >
-    <c:param name="id" value="${ad.id}"  />
-</c:url >" > <h2> ${ad.title} </h2>
+            <a href="<c:url value="/details"><c:param name="id" value="${ad.id}"/></c:url >">
+                <h2> ${ad.title} </h2>
             </a>
-<%--            <h2><a href="../details">${ad.title}</a></h2>--%>
             <p>${ad.description}</p>
-
         </div>
-
-
     </c:forEach>
 
 </div>

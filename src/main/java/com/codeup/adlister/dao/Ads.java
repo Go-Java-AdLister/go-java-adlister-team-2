@@ -11,5 +11,5 @@ public interface Ads {
     Long insert(Ad ad);
     
 
-    Ad findById(int id);
+    Ad findById(long id);
 }
