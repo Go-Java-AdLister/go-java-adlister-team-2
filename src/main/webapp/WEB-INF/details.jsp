@@ -16,6 +16,5 @@
 
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-
 </body>
 </html>
