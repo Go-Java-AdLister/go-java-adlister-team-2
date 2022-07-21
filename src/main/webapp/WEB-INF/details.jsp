@@ -9,11 +9,12 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Create a new Ad" />
-    </jsp:include></head>
+        <jsp:param name="title" value="Create a new Ad"/>
+    </jsp:include>
+</head>
 <body>
 
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 
 </body>
