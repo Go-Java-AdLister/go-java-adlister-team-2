@@ -12,7 +12,7 @@
     <h1>Here Are all the ads!</h1>
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <a href="<c:url value="/ads/details"><c:param name="id" value="${ad.id}"/></c:url >">
+            <a href="<c:url value="/ads/details?id=${ad.id}"/>">
                 <h2> ${ad.title} </h2>
             </a>
             <p>${ad.description}</p>

@@ -13,7 +13,7 @@
         <h3>Author: <c:out value="${user.username}"/></h3>
         <p><c:out value="${ad.description}"/></p>
         <form action="/ads/details" method="POST">
-            <button type="submit">Delete Ad</button>
+            <button type="hidden">Delete Ad</button>
         </form>
     </div>
 </body>
