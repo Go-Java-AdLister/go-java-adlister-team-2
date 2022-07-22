@@ -10,7 +10,11 @@
 <body>
     <div class="col-md-6">
         <h2><c:out value="${ad.title}"/></h2>
+        <h3>Author: <c:out value="${user.username}"/></h3>
         <p><c:out value="${ad.description}"/></p>
+        <form action="/ads/details" method="POST">
+            <button type="submit">Delete Ad</button>
+        </form>
     </div>
 </body>
 </html>

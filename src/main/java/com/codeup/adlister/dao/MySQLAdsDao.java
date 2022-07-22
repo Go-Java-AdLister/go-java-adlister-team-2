@@ -81,9 +81,16 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-//    public Ad deleteById() {
-//        String query =
-//    }
+    public void delete(Ad ad) {
+        String query = "DELETE FROM ads WHERE id = ?";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, ad.getId());
+            stmt.executeUpdate();
+        } catch(SQLException e){
+            throw new RuntimeException("Error deleting ad by id", e);
+        }
+    }
 
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();

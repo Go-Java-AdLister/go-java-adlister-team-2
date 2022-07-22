@@ -9,7 +9,8 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
-    
-
+    // delete an add
+    void delete(Ad ad);
+    // find an add using only the id of the ad
     Ad findById(long id);
 }
