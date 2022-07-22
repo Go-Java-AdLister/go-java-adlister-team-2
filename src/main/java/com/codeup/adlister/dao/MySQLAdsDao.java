@@ -81,6 +81,23 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public void editAd(String title, String description, String category, Ad ad) {
+        String query = "UPDATE ads SET title = ?, description = ?, category = ? WHERE id= ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, title);
+            stmt.setString(2, description);
+            stmt.setString(3, category);
+            stmt.setLong(4, ad.getId());
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+        }
+
+    }
+
     public void delete(Ad ad) {
         String query = "DELETE FROM ads WHERE id = ?";
         try{

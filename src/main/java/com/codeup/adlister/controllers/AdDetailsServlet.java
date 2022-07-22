@@ -21,8 +21,13 @@ public class AdDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long id = Long.parseLong(req.getParameter("id"));
         Ad ad = DaoFactory.getAdsDao().findById(id);
+        User user = (User) req.getSession().getAttribute("user");
         req.getSession().setAttribute("ad", ad);
+        boolean isUser = ad.getUserId() == user.getId();
+
+        req.getSession().setAttribute("isUser", isUser);
         req.getRequestDispatcher("/WEB-INF/details.jsp").forward(req, resp);
+
     }
 
     @Override

@@ -12,9 +12,19 @@
         <h2><c:out value="${ad.title}"/></h2>
         <h3>Author: <c:out value="${user.username}"/></h3>
         <p><c:out value="${ad.description}"/></p>
-        <form action="/ads/details" method="POST">
-            <button type="hidden">Delete Ad</button>
-        </form>
+        <c:choose >
+            <c:when test="${isUser}">
+
+                <form action="/ads/details" method="POST">
+                    <button type="submit">Delete Ad</button>
+                </form>
+
+                <form action="/ads/edit" method="get">
+                    <button type="submit">Edit Ad</button>
+                </form>
+            </c:when>
+        </c:choose>    
+    
     </div>
 </body>
 </html>
