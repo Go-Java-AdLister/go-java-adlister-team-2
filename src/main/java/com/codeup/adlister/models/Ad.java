@@ -37,6 +37,10 @@ public class Ad {
         this.category = category;
     }
 
+    public Ad(long userId){
+        this.userId = userId;
+    }
+
 
 
     public long getId() {
