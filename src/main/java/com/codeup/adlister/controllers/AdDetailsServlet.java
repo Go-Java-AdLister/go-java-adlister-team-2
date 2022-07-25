@@ -22,9 +22,12 @@ public class AdDetailsServlet extends HttpServlet {
         long id = Long.parseLong(req.getParameter("id"));
         Ad ad = DaoFactory.getAdsDao().findById(id);
         User user = (User) req.getSession().getAttribute("user");
+        if(user == null){
+            resp.sendRedirect("/login");
+            return;
+        }
         req.getSession().setAttribute("ad", ad);
         boolean isUser = ad.getUserId() == user.getId();
-
         req.getSession().setAttribute("isUser", isUser);
         req.getRequestDispatcher("/WEB-INF/details.jsp").forward(req, resp);
 

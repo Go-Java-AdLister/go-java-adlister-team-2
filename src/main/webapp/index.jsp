@@ -30,7 +30,7 @@
 
     <div class="container">
         <img src="<c:url value="img/Sunshine.webp"/>"/>
-        <h1>Welcome to the Smile-lister!</h1>
+        <h1>Welcome to the Glad-lister!</h1>
     </div>
 
     <div>
