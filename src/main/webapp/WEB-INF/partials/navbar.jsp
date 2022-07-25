@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="/ads">SMILE</a>
+            <a class="navbar-brand" href="/ads">GLAD</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
 
@@ -23,5 +23,5 @@
             </c:choose>
         </ul>
     </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
+    <!-- /.container-fluid -->
 </nav>
