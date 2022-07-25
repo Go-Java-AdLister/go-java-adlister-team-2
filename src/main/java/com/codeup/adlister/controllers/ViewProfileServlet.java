@@ -10,6 +10,7 @@ import java.io.IOException;
 @WebServlet(name = "controllers.ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // prevents a user from viewing the profile page if not logged in
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;

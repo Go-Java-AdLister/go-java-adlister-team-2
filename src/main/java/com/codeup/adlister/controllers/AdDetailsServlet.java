@@ -22,11 +22,13 @@ public class AdDetailsServlet extends HttpServlet {
         long id = Long.parseLong(req.getParameter("id"));
         Ad ad = DaoFactory.getAdsDao().findById(id);
         User user = (User) req.getSession().getAttribute("user");
+        // Prevents users from viewing ad details unless user is logged in
         if(user == null){
             resp.sendRedirect("/login");
             return;
         }
         req.getSession().setAttribute("ad", ad);
+        // sets a boolean attribute to true if the user is the ad creator
         boolean isUser = ad.getUserId() == user.getId();
         req.getSession().setAttribute("isUser", isUser);
         req.getRequestDispatcher("/WEB-INF/details.jsp").forward(req, resp);
@@ -37,10 +39,12 @@ public class AdDetailsServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Ad ad = (Ad) req.getSession().getAttribute("ad");
         User user = (User) req.getSession().getAttribute("user");
-        boolean incorrectUser;
+        // redirects to login page if not logged in
         if (user == null) {
             resp.sendRedirect("/login");
-        } else if (ad.getUserId() == user.getId()) {
+        }
+        // verifies that the user id and associated ad user id are the same before allowing an ad to be deleted
+        else if (ad.getUserId() == user.getId()) {
             DaoFactory.getAdsDao().delete(ad);
             resp.sendRedirect("/ads");
         } else {

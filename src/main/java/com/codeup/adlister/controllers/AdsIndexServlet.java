@@ -12,12 +12,8 @@ import java.io.IOException;
 @WebServlet(name = "controllers.AdsIndexServlet", urlPatterns = "/ads")
 public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // lists all ads from the ads table
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     }
 }

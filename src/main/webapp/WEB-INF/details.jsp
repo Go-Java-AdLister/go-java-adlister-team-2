@@ -13,6 +13,7 @@
     <h3>Author: <c:out value="${user.username}"/></h3>
     <p><c:out value="${ad.description}"/></p>
     <c:choose>
+<%--    isUser from servlet is verified, and allows the delete and edit buttons to be visible    --%>
         <c:when test="${isUser}">
             <form action="/ads/details" method="POST">
                 <button type="submit">Delete Ad</button>
