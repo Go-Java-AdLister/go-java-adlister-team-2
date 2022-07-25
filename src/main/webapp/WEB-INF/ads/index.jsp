@@ -5,6 +5,27 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Here are all the happys"/>
     </jsp:include>
+
+    <style>
+
+        body {
+            color: cornflowerblue;
+            background-color: #FFFDC0;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Sacramento', cursive;
+            font-size: 6rem;
+        }
+
+        h2 {
+            border-color: cornflowerblue;
+        }
+
+
+    </style>
+
 </head>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <body>
@@ -12,9 +33,13 @@
     <h1>Here Are all the ads!</h1>
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
+
+            <h2 class="container">${ad.title}</h2>
+
             <a href="<c:url value="/ads/details?id=${ad.id}"/>">
                 <h2> ${ad.title} </h2>
             </a>
+
             <p>${ad.description}</p>
         </div>
     </c:forEach>
