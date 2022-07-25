@@ -95,16 +95,15 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
         }
-
     }
 
     public void delete(Ad ad) {
         String query = "DELETE FROM ads WHERE id = ?";
-        try{
+        try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setLong(1, ad.getId());
             stmt.executeUpdate();
-        } catch(SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException("Error deleting ad by id", e);
         }
     }

@@ -7,7 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Sacramento&display=swap"
       rel="stylesheet">
 <style>
-
     body {
         color: cornflowerblue;
         background-color: #FFFDC0;
@@ -22,5 +21,4 @@
     h2 {
         border-color: cornflowerblue;
     }
-
 </style>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Create a new glAd" />
+        <jsp:param name="title" value="Create a new glAd"/>
     </jsp:include>
 </head>
 <body>

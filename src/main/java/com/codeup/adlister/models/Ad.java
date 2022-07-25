@@ -11,7 +11,6 @@ public class Ad {
     private long likes = 0;
     private boolean isFlagged = false;
 
-
     public Ad(long id, long userId, String title, String description, String category, long likes, boolean isFlagged) {
         this.id = id;
         this.userId = userId;
@@ -37,11 +36,9 @@ public class Ad {
         this.category = category;
     }
 
-    public Ad(long userId){
+    public Ad(long userId) {
         this.userId = userId;
     }
-
-
 
     public long getId() {
         return id;

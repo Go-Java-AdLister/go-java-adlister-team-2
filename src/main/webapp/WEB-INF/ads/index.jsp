@@ -5,9 +5,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Here are all the happys"/>
     </jsp:include>
-
     <style>
-
         body {
             color: cornflowerblue;
             background-color: #FFFDC0;
@@ -22,10 +20,7 @@
         h2 {
             border-color: cornflowerblue;
         }
-
-
     </style>
-
 </head>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <body>
@@ -39,8 +34,6 @@
             <p>${ad.description}</p>
         </div>
     </c:forEach>
-
 </div>
-
 </body>
 </html>

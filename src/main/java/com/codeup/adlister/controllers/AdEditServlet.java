@@ -15,8 +15,6 @@ public class AdEditServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/edit.jsp").forward(req, resp);
-
-        System.out.println("description =  " + req.getParameter("description"));
     }
 
     @Override
@@ -25,9 +23,7 @@ public class AdEditServlet extends HttpServlet {
         String description = req.getParameter("description");
         String category = req.getParameter("category");
         Ad ad = (Ad) req.getSession().getAttribute("ad");
-        System.out.println("what is this title: " + ad.getTitle());
         DaoFactory.getAdsDao().editAd(title, description,category, ad);
-
         resp.sendRedirect("/ads");
     }
 }
